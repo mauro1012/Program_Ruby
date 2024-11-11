@@ -1,0 +1,11 @@
+# Usa una imagen base de Ruby
+FROM ruby:3.0-slim
+
+# Copia el archivo Ruby al contenedor
+COPY guessing_game.rb /app/guessing_game.rb
+
+# Define el directorio de trabajo
+WORKDIR /app
+
+# Ejecuta el script de Ruby
+CMD ["ruby", "guessing_game.rb"]
